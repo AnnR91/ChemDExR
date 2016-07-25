@@ -8,9 +8,15 @@
 library(shiny)
 
 shinyUI(fluidPage(
+  
+  tags$head(),
 
   # Application title
-  titlePanel("ChemDExR - Chemical Data Exploration in R"),
+  tags$h1(tags$strong("ChemDExR")," - Chemical Data Exploration in R"),
+  tags$h4("Tool for data analysis .... "),
+  
+  tags$br(),
+ 
 
   # Uploading files
       fileInput('file', 'Choose file to upload',
@@ -38,23 +44,13 @@ shinyUI(fluidPage(
   tags$hr(),
   
   mainPanel(
-    tableOutput('data')
+    tableOutput('file')
   )
 ))
 
 
-shinyServer(function(input, output) {
-  output$data <- renderTable({
-    
-    inFile <- input$file
-    
-    if (is.null(inFile))
-      return(NULL)
-    
-    read.csv(inFile$datapath, header = input$header,
-             sep = input$sep, quote = input$quote)
-  })
-})
+shinyServer(function(input, output) { })
+  
+  
 
-
-# shinyApp(ui=ui, server=server)
+shinyApp(ui=shinyUI, server=shinyServer)
