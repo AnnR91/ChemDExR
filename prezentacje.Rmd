@@ -1,6 +1,5 @@
----
-title: "<h1>meet(R) in Tricity</h1>"
----
+#meet(R) in Tricity
+
 #Prezentacje z pierwszego spotkania
 
 
