@@ -1,0 +1,16 @@
+---
+title: "meet(R) in Tricity"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+##Prezentacje z pierwszego spotkania
+
+<b>RSelenium jako alternatywa dla rvest podczas web-srcapingu</b> - Krzysztof S³omczyñski
+
+<https://krzyslom.github.io/meet-R/#/>
+
+
